@@ -1,5 +1,6 @@
-import { people, recipes } from "./data.jsx";
+import { people, recipes, poem } from "./data.jsx";
 import getImageUrl from "./Clock";
+import { Fragment } from "react";
 
 // const people = [
 //   "Creola Katherine Johnson: mathematician",
@@ -54,6 +55,27 @@ export default function RenderingLists() {
     (person) => person.profession !== "chemist"
   );
 
+  function Recipe({ name, ingredients }) {
+    return (
+      <div>
+        <h2>{name}</h2>
+        <ul>
+          {ingredients.map((ingredient) => (
+            <li key={ingredient}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  let output = [];
+
+  poem.lines.forEach((line, i) => {
+    output.push(<hr key={i + "-separator"} />);
+    output.push(<p key={i + "-text"}>{line}</p>);
+  });
+  output.shift();
+
   return (
     <>
       <div>
@@ -87,6 +109,26 @@ export default function RenderingLists() {
           </div>
         ))}
       </div>
+
+      <div>
+        <h1>Recipes</h1>
+        {recipes.map((recipe) => (
+          <Recipe {...recipe} key={recipe.id} />
+        ))}
+      </div>
+
+      <div>
+        <article>{output}</article>
+      </div>
+
+      <article>
+        {poem.lines.map((line, i) => (
+          <Fragment key={i}>
+            {i > 0 && <hr />}
+            <p>{line}</p>
+          </Fragment>
+        ))}
+      </article>
     </>
   );
 }

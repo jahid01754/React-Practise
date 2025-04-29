@@ -60,3 +60,11 @@ export const recipes = [
     ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
   },
 ];
+
+export const poem = {
+  lines: [
+    "I write, erase, rewrite",
+    "Erase again, and then",
+    "A poppy blooms.",
+  ],
+};
