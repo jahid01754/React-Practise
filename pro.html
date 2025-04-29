@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <script>
+      const javascript = {
+        name: "JavaScript",
+        libraries: ["React", "Vue", "Angular"],
+        printLibraries: function () {
+          console.log(this);
+          this.libraries.forEach(function (library) {
+            console.log(`${this.name} loves ${library}`);
+          });
+          // modification
+          this.libraries.forEach(
+            function (library) {
+              console.log(`${this.name} loves ${library}`);
+            }.bind(this)
+          );
+          //another way
+          const self = this;
+          this.libraries.forEach(function (library) {
+            console.log(`${self.name} loves ${library}`);
+          });
+          //arrow function // best practise
+          this.libraries.forEach((library) => {
+            console.log(`${this.name} loves ${library}`);
+          });
+        },
+      };
+
+      javascript.printLibraries();
+    </script>
+  </body>
+</html>
