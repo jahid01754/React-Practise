@@ -1,4 +1,4 @@
-import { people } from "./data.jsx";
+import { people, recipes } from "./data.jsx";
 import getImageUrl from "./Clock";
 
 // const people = [
@@ -72,6 +72,20 @@ export default function RenderingLists() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div>
+        <h1>Recipies</h1>
+        {recipes.map((item) => (
+          <div key={item.id}>
+            <h2>{item.name}</h2>
+            <ul>
+              {item.ingredients.map((ingredient) => (
+                <li key={ingredient}>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </>
   );
