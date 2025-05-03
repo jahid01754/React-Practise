@@ -1,7 +1,11 @@
+import FancyText from "./FancyText";
+
 export default function UITree() {
   return (
     <>
-      <div>Hello World</div>
+      <div>
+        <FancyText />
+      </div>
     </>
   );
 }
