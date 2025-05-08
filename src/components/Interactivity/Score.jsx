@@ -35,6 +35,7 @@ export default function Score() {
         <button onClick={() => handleClick(1)}>+1</button>
         <button onClick={() => handleClick(3)}>+3</button>
         <button onClick={() => handleClick(5)}>+5</button>
+        <button onClick={() => setScore(0)}>Reset</button>
         <h1>Score: {score}</h1>
       </div>
     </>
