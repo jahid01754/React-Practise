@@ -10,6 +10,7 @@ import UITree from "./components/Tree/UITree.jsx";
 import InterActive from "./components/Interactivity/InterActive.jsx";
 import AddingInterActivity from "./components/Interactivity/AddingInterActivity.jsx";
 import Chat from "./components/Interactivity/Chat.jsx";
+import Score from "./components/Interactivity/Score.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,5 +23,6 @@ createRoot(document.getElementById("root")).render(
     {/* <InterActive /> */}
     {/* <AddingInterActivity /> */}
     <Chat />
+    <Score />
   </StrictMode>
 );
