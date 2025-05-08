@@ -9,6 +9,7 @@ import CreateStory from "./components/PureComponent/CreateStory.jsx";
 import UITree from "./components/Tree/UITree.jsx";
 import InterActive from "./components/Interactivity/InterActive.jsx";
 import AddingInterActivity from "./components/Interactivity/AddingInterActivity.jsx";
+import Chat from "./components/Interactivity/Chat.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
     {/* <CreateStory /> */}
     {/* <UITree /> */}
     {/* <InterActive /> */}
-    <AddingInterActivity />
+    {/* <AddingInterActivity /> */}
+    <Chat />
   </StrictMode>
 );
