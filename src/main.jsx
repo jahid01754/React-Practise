@@ -12,6 +12,7 @@ import AddingInterActivity from "./components/Interactivity/AddingInterActivity.
 import Chat from "./components/Interactivity/Chat.jsx";
 import Score from "./components/Interactivity/Score.jsx";
 import UpdatingObjects from "./components/Interactivity/UpdatingObjects.jsx";
+import UpdatingArrays from "./components/Interactivity/UpdatingArrays.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")).render(
     {/* <AddingInterActivity /> */}
     <Chat />
     <Score />
-    <UpdatingObjects />
+    {/* <UpdatingObjects /> */}
+    <UpdatingArrays />
   </StrictMode>
 );
