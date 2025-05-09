@@ -24,8 +24,8 @@ createRoot(document.getElementById("root")).render(
     {/* <UITree /> */}
     {/* <InterActive /> */}
     {/* <AddingInterActivity /> */}
-    <Chat />
-    <Score />
+    {/* <Chat /> */}
+    {/* <Score /> */}
     {/* <UpdatingObjects /> */}
     <UpdatingArrays />
   </StrictMode>
